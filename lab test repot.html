@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>medireport</title> 
+	<link rel="stylesheet"
+		href="style.css"> 
+</head> 
+
+<body> 
+	<div class="main"> 
+		<h1>lab test report</h1> 
+		<form action=""> 
+			<label name="test type">test type:</label>
+		    <select><option> --------Select-------</option>
+                <option value="or scan"> or scan</option>  
+                <option value="bold test">blood test</option>  
+                <option value=""> temperature</option>  
+                <option value="pulse"> pulse</option>   
+            </select>
+            
+            <label name="test file">test file:</label>
+            <input type="file" id="myFile" name="filename">
+
+
+			<label name="dob">Date,time :</label> 
+			<div id="current_date">
+                <script>
+                    document.getElementById("current_date").innerHTML = Date();
+                </script>
+                <div id="current_time"></div>
+                <script>
+                    document.getElementById("current_time").innerHTML = Time();
+                </script>
+            </div>
+
+			<div class="wrap"> 
+				<button type="submit" onclick="solve()"> 
+				Submit 
+				</button> 
+			</div> 
+		</form> 
+	</div> 
+	<script src="script.js"></script> 
+</body> 
+
+</html>

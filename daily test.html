@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>medireport</title> 
+	<link rel="stylesheet"
+		href="style.css"> 
+</head> 
+
+<body> 
+	<div class="main"> 
+		<h1> Daily Test Data</h1> 
+		<form action=""> 
+			<label name="test">test:</label>
+		    <select><option> --------Select-------</option>
+                <option value="Sugar">sugar</option>  
+                <option value="bp">bp</option>  
+                <option value="temperature"> temperature</option>  
+                <option value="pulse"> pulse</option>   
+            </select>
+
+			<label name="dob">Date,time :</label> 
+			<div id="current_date">
+                <script>
+                    document.getElementById("current_date").innerHTML = Date();
+                </script>
+                <div id="current_time"></div>
+                <script>
+                    document.getElementById("current_time").innerHTML = Time();
+                </script>
+            </div>
+
+			<div class="wrap"> 
+				<button type="submit" onclick="solve()"> 
+				Submit 
+				</button> 
+			</div> 
+		</form> 
+	</div> 
+	<script src="script.js"></script> 
+</body> 
+
+</html>

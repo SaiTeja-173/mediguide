@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+.q{
+text-align:center;
+border:0.2rem solid;  
+background-color:#FAAFBA;
+}
+.hdr{
+font-family:Lato;
+}
+body{
+background-color:#1a1c1c;
+}
+.icon{
+border-radius: 50%;
+}
+.ff{
+top: 50%;
+bottom: 50%;
+}
+.a{
+    padding-bottom: 0;
+}
+.b{
+    padding-top:0;
+    padding-left:800px;
+}
+
+
+body{
+ font-family: arial;
+}
+.main{
+
+ margin: 2%;
+}
+
+.card{
+     width: 20%;
+     display: inline-block;
+     box-shadow: 2px 2px 20px black;
+     border-radius: 5px; 
+     margin: 2%;
+    }
+
+.image img{
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  
+
+ 
+ }
+
+.title{
+ 
+  text-align: center;
+  padding: 10px;
+  
+ }
+
+h1{
+  font-size: 20px;
+ }
+
+.des{
+  padding: 3px;
+  text-align: center;
+ 
+  padding-top: 10px;
+        border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+button{
+  margin-top: 40px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding:10px;
+}
+button:hover{
+  background-color: black;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body style="background-color:white;">
+
+
+  <div>
+    <h1 style="font-size:50px;" class="a"><center>MEDIGUIDE</center></h1>
+    </div>
+    <div>
+    <p class="b">-Chronic Diseases</p>
+    </div>
+    <div>
+      
+    </div>
+    <h2>
+    <hr><marquee bgcolor="pink"> <font size="5"> Medical prevention for Chronic diseases</font></marquee></h2>
+
+
+
+<div class="navbar">
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">file
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="	Ctrl + N">new file</a>
+    <a href="C:\Users\MVSR\Desktop\2451-21-173">open file</a>
+    <a href="#">new window</a>
+    <a href="#">folder</a>
+    <a href="#">New folder</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="my()">Edit
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="down">
+      <a href="#">undo</a>
+      <a href="#">redo</a>
+      <a href="ctrl+x">cut</a>
+      <a href="ctrl+c">copy</a>
+      <a href="ctrl+p">past</a>
+      </div>
+    </div>
+  <a href="#view">view</a>
+    <a href="#help">help</a>
+    <a onclick="saveToFile()">Save</a>
+    <a onclick="clearNote()">Clear</a>
+  </div>  
+</div>
+
+<div class="main">
+
+    <!--card1 -->
+   
+   <div class="card">
+   
+   <div class="image">
+      <img src="https://myaudiomotion.com/wp-content/uploads/2020/05/Test-Logo-Circle-black-transparent-1024x1024-500x500.png">
+   </div>
+   <div class="title">
+  <h1>TEST</h1>
+   </div>
+   <div class="des">
+    <p>Daily  base test in home</p>
+   <button class="btn"><a href="daily test.html">Dailt Test</a></button>
+   </div>
+   </div>
+   
+   <!--card2-->
+   
+   <div class="card">
+   
+   <div class="image">
+      <img src="https://thumbs.dreamstime.com/b/laboratory-analysis-flat-icon-design-clipboard-flask-medical-services-laboratory-analysis-flat-icon-133593069.jpg">
+   </div>
+   <div class="title">
+    <h1>LAB TEST</h1>
+   </div>
+   <div class="des">
+    <p> Lab taken test </p>
+   <button class="btn"><a href="lab test repot.html">Lab Test</a></button>
+   </div>
+   </div>
+  
+   <!--card 3-->
+    
+   <div class="card">
+   
+   <div class="image">
+      <img src="https://ccmu.cucas.cn/uploads/school/2019/0515/1557885786673860.jpg">
+   </div>
+   <div class="title">
+   <h1>PRICPTION</h1>
+   </div>
+   <div class="des">
+    <p>Check the given pricption...</p>
+   <button class="btn"><a href="prescription.html">PRICPTION</a></button>
+   </div>
+   </div>
+  
+   <!--card4 -->
+
+   <div class="card">
+   
+    <div class="image">
+       <img src="https://th.bing.com/th/id/OIP.E4Awk_r9eYX1Ef8Qld5zRgHaHa?rs=1&pid=ImgDetMain">
+    </div>
+    <div class="title">
+     <h1>MEDICINE LIST</h1>
+    </div>
+    <div class="des">
+     <p> Various types  of the medicine...</p>
+    <button>Read More...</button>
+    </div>
+    </div>
+
+       <!--card5 -->
+   <div class="card">
+   
+   <div class="image">
+      <img src="https://th.bing.com/th/id/OIP.2XerAACH6C3snyMfpjuI6AAAAA?rs=1&pid=ImgDetMain">
+   </div>
+   <div class="title">
+    <h1>GRAPHS</h1>
+   </div>
+   <div class="des">
+    <p>Reading the values of test .... </p>
+   <button></button>
+   </div>
+   </div>
+
+   <div class="card">
+   
+    <div class="image">
+       <img src="https://static.vecteezy.com/system/resources/previews/000/464/242/original/bone-seamless-pattern-for-use-as-wallpaper-vector.jpg">
+    </div>
+    <div class="title">
+     <h1>BONE SCAN REATED</h1>
+    </div>
+    <div class="des">
+     <p>You can Add Desccription Here...</p>
+    <button>Read More...</button>
+    
+    </div>
+    </div>
+   
+   <!--card5 -->
+
+   <div class="card">
+   
+   <div class="image">
+      <img src="https://i1.wp.com/science-infographics.org/wp-content/uploads/2014/01/125367737-Infographic-Common-Skin-Diseases-in-America.jpg?fit=1200%2C776">
+   </div>
+   <div class="title">
+    <h1>SKIN DISEASES</h1>
+   </div>
+   <div class="des">
+    <p>Various types of skin disease</p>
+   <button></button>
+   </div>
+   </div>
+   
+   <!--cards -->
+   
+   <div class="card">
+   
+   <div class="image">
+      <img src="https://wallpapercave.com/wp/wp6683617.jpg">
+   </div>
+   <div class="title">
+    <h1>DISEASE LIST</h1>
+   </div>
+   <div class="des">
+    <p>You can Add Desccription Here...</p>
+   <button>Read More...</button>
+   </div>
+   </div>
+   <!--cards -->
+   
+
+   <div class="card">
+   
+    <div class="image">
+       <img src="https://coruzant.com/wp-content/uploads/2022/10/chatbot-robot.jpg">
+    </div>
+    <div class="title">
+     <h1>CHATBOT</h1>
+    </div>
+    <div class="des">
+     <p>You can Add Desccription Here...</p>
+    <button>Read More...</button>
+    </div>
+    </div>
+   </div>
+
+
+<script> 
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<script> 
+  function my() {
+    document.getElementById("down").classList.toggle("show");
+  }
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+    var down = document.getElementById("down");
+      if (down.classList.contains('show')) {
+        down.classList.remove('show');
+      }
+    }
+  }
+  </script>
+
+<script>
+  function saveToFile() {
+      var content = document.getElementById('note').innerText;
+      var blob = new Blob([content], { type: 'text/plain' });
+      var a = document.createElement('a');
+      a.href = window.URL.createObjectURL(blob);
+      a.download = 'note.txt';
+      a.click();
+  }
+
+  function clearNote() {
+      document.getElementById('note').innerText = '';
+  }
+</script>
+</body>
+</html>

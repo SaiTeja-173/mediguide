@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily BP or Sugar Level</title>
+</head>
+<body>
+    <h1>Daily Blood Pressure or Sugar Level Entry</h1>
+    <form action="/submit-reading" method="post">
+        <label for="date">Date (YYYY-MM-DD):</label><br>
+        <input type="date" id="date" name="date" required><br>
+
+        <fieldset>
+            <legend>Reading Type</legend>
+            <label for="bp">Blood Pressure</label>
+            <input type="radio" id="bp" name="type" value="bp" required>
+            <label for="sugar">Sugar Level</label>
+            <input type="radio" id="sugar" name="type" value="sugar" required>
+        </fieldset><br>
+
+        <div id="bp-fields" style="display:none;">
+            <label for="systolic">Systolic BP:</label><br>
+            <input type="number" id="systolic" name="systolic" min="0" max="250" required><br>
+
+            <label for="diastolic">Diastolic BP:</label><br>
+            <input type="number" id="diastolic" name="diastolic" min="0" max="150" required><br>
+        </div>
+
+        <div id="sugar-fields" style="display:none;">
+            <label for="sugar-level">Sugar Level (mg/dL):</label><br>
+            <input type="number" id="sugar-level" name="sugar_level" min="0" max="600" required><br>
+        </div>
+
+        <script>
+            const typeInput = document.querySelector('input[name="type"]');
+            const bpFields = document.querySelector('#bp-fields');
+            const sugarFields = document.querySelector('#sugar-fields');
+
+            typeInput.addEventListener('change', (event) => {
+                if (event.target.value === 'bp') {
+                    bpFields.style.display = 'block';
+                    sugarFields.style.display = 'none';
+                } else {
+                    bpFields.style.display = 'none';
+                    sugarFields.style.display = 'block';
+                }
+            });
+
+            typeInput.dispatchEvent(new Event('change'));
+        </script>
+
+        <input type="submit" value="Submit Reading">
+    </form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<table id="readingsTable">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Blood Pressure (mmHg)</th>
+            <th>Sugar Level (mg/dL)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2023-03-15</td>
+            <td>120/80</td>
+            <td>100</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-03-16</td>
+            <td>110/70</td>
+            <td>95</td>
+            <td></td>
+        </tr>
+        <!-- Add more readings here -->
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">
+                <button id="addReadingButton">Add Reading</button>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<template id="readingTemplate">
+    <tr>
+        <td><input type="date" name="date" required></td>
+        <td><input type="text" name="bp" pattern="[0-9]+/[0-9]+" required></td>
+        <td><input type="number" name="sugar" min="0" max="999" required></td>
+        <td>
+            <button type="submit">Save</button>
+            <button type="button" onclick="removeReading(this)">Remove</button>
+        </td>
+    </tr>
+</template>
+
+<script>
+    document.getElementById('addReadingButton').addEventListener('click', function() {
+        var table = document.getElementById('readingsTable');
+        var template = document.getElementById('readingTemplate').content;
+        var clone = document.importNode(template, true);
+        var row = table.insertRow(-1);
+        row.appendChild(clone);
+    });
+
+    function removeReading(button) {
+        var row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+    }
+</script>

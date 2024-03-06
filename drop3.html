@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+.q{
+text-align:center;
+border:0.2rem solid;  
+background-color:#FAAFBA;
+}
+.hdr{
+font-family:Lato;
+}
+body{
+background-color:#1a1c1c;
+}
+.icon{
+border-radius: 50%;
+}
+.ff{
+top: 50%;
+bottom: 50%;
+}
+.a{
+    padding-bottom: 0;
+}
+.b{
+    padding-top:0;
+    padding-left:800px;
+}
+
+.container ul li{
+    float:left;
+    list-style: none;
+    width:20%;
+    height:300px;
+    background: red;
+    margin :20px 0px 20px 55px; 
+    border:2px solid blue;
+    box-sizing: border-box;
+}
+.container ul li:hover{
+    opacity: 0.8;
+}
+
+.container ul li .bottom{
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    background: blue;    
+    text-align: center;
+    color:white;
+    font-size: 20px;
+   
+}
+
+@media screen and (max-width:1250px){
+    .container ul li{
+        width:40%;
+        margin-left: 40px;
+         
+    }
+
+</style>
+</head>
+<body style="background-color:white;">
+
+
+  <div>
+    <h1 style="font-size:50px;" class="a"><center>MEDIGUIDE</center></h1>
+    </div>
+    <div>
+    <p class="b">-Chronic Diseases</p>
+    </div>
+    <h2>
+    <hr><marquee bgcolor="pink"> <font size="5"> Medical prevention for Chronic diseases</font></marquee>
+
+
+
+<div class="navbar">
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">file
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="	Ctrl + N">new file</a>
+    <a href="C:\Users\MVSR\Desktop\2451-21-173">open file</a>
+    <a href="#">new window</a>
+    <a href="#">folder</a>
+    <a href="#">New folder</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="my()">Edit
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="down">
+      <a href="#">undo</a>
+      <a href="#">redo</a>
+      <a href="ctrl+x">cut</a>
+      <a href="ctrl+c">copy</a>
+      <a href="ctrl+p">past</a>
+      </div>
+    </div>
+  <a href="#view">view</a>
+    <a href="#help">help</a>
+    <a onclick="saveToFile()">Save</a>
+    <a onclick="clearNote()">Clear</a>
+  </div>  
+</div>
+
+<div class="container">
+        <ul>
+            <li> <div class="bottom">Heading</div> </li>
+            <li> <div class="bottom">Heading</div> </li>
+            <li> <div class="bottom">Heading</div> </li>
+            <li> <div class="bottom">Heading</div> </li>
+            <li> <div class="bottom">Heading</div> </li>
+            <li> <div class="bottom">Heading</div> </li>
+            <li> <div class="bottom">Heading</div> </li>
+            <li> <div class="bottom">Heading</div> </li>
+            
+        </ul>
+    </div>
+
+
+<script> 
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<script> 
+  function my() {
+    document.getElementById("down").classList.toggle("show");
+  }
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+    var down = document.getElementById("down");
+      if (down.classList.contains('show')) {
+        down.classList.remove('show');
+      }
+    }
+  }
+  </script>
+
+<script>
+  function saveToFile() {
+      var content = document.getElementById('note').innerText;
+      var blob = new Blob([content], { type: 'text/plain' });
+      var a = document.createElement('a');
+      a.href = window.URL.createObjectURL(blob);
+      a.download = 'note.txt';
+      a.click();
+  }
+
+  function clearNote() {
+      document.getElementById('note').innerText = '';
+  }
+</script>
+</body>
+</html>

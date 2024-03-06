@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Pressure Level Maintenance</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<canvas id="bpChart" width="400" height="200"></canvas>
+
+<script>
+  // Sample data (replace with your actual data)
+  var data = {
+    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+    datasets: [{
+      label: 'Systolic Pressure',
+      borderColor: 'rgba(255, 99, 132, 1)',
+      data: [120, 125, 118, 130],
+      fill: false
+    }, {
+      label: 'Diastolic Pressure',
+      borderColor: 'rgba(54, 162, 235, 1)',
+      data: [80, 85, 78, 90],
+      fill: false
+    }]
+  };
+
+  var ctx = document.getElementById('bpChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: data,
+    options: {
+      scales: {
+        x: {
+          type: 'linear',
+          position: 'bottom'
+        },
+        y: {
+          min: 60,
+          max: 140
+        }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
